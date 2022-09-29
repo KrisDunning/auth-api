@@ -13,7 +13,7 @@ function handle404(req, res, next) {
     status: 404,
     message: 'Sorry, we could not find what you were looking for',
   };
-
+  console.log(req.body);
   res.status(404).json(errorObject);
 }
 

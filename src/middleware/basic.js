@@ -4,7 +4,7 @@ const base64 = require('base-64');
 const { users } = require('../models');
 
 module.exports = async (req, res, next) => {
-
+  console.log('Basic Auth was called');
   if (!req.headers.authorization) { return _authError(); }
 
   let basic = req.headers.authorization.split(' ').pop();
